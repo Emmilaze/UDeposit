@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/FontTheme"
+    android:background="@mipmap/back">
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/main"
+        android:fontFamily="@font/font"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="137dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="48dp"
+        android:background="#B3E5FC"
+        android:fontFamily="@font/font"
+        android:onClick="onClickUAH"
+        android:text="@string/UAH"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_home" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="137dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="53dp"
+        android:background="#B3E5FC"
+        android:fontFamily="@font/font"
+        android:onClick="onClickUSD"
+        android:text="@string/USD"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="137dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="231dp"
+        android:background="#B3E5FC"
+        android:fontFamily="@font/font"
+        android:onClick="onClickEURO"
+        android:text="@string/EURO"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

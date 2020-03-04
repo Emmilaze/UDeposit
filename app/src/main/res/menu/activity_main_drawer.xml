@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/FontTheme"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item android:state_pressed="true"
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/currency"
+            android:title="@string/menu_home" />
+        <item android:state_pressed="true"
+            android:id="@+id/nav_gallery"
+            android:theme="@style/FontTheme"
+            android:icon="@mipmap/deposits"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@mipmap/search"
+            android:theme="@style/FontTheme"
+            android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@mipmap/calculator"
+            android:theme="@style/FontTheme"
+            android:title="@string/menu_tools" />
+        <item
+            android:id="@+id/nav_send"
+            android:theme="@style/FontTheme"
+            android:icon="@mipmap/graph"
+            android:title="@string/menu_send" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share" />
+        </menu>
+    </item>
+</menu>
