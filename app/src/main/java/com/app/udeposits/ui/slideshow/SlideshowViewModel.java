@@ -2,22 +2,16 @@ package com.app.udeposits.ui.slideshow;
 
 import android.content.Context;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import androidx.lifecycle.ViewModel;
 
 import com.app.udeposits.R;
-import com.app.udeposits.core.Deposit;
-import com.app.udeposits.core.fileManager.DepositManager;
-import com.app.udeposits.ui.share.ShareViewModel;
+import com.app.udeposits.core.deposit.DepositManager;
 
 import java.util.List;
-
-import static com.app.udeposits.ui.gallery.GalleryViewModel.fields;
 
 public class SlideshowViewModel extends ViewModel {
 

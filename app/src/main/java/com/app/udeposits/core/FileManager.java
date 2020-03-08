@@ -1,8 +1,8 @@
-package com.app.udeposits.core.fileManager;
+package com.app.udeposits.core;
 
 import android.app.Activity;
 
-import com.app.udeposits.core.Deposit;
+import com.app.udeposits.core.deposit.Deposit;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

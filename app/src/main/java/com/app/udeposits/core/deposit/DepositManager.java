@@ -1,16 +1,18 @@
-package com.app.udeposits.core.fileManager;
+package com.app.udeposits.core.deposit;
 
 import android.app.Activity;
 
 import com.app.udeposits.R;
-import com.app.udeposits.core.Deposit;
+import com.app.udeposits.core.FileManager;
 import com.app.udeposits.ui.gallery.GalleryFragment;
-import com.app.udeposits.ui.gallery.GalleryViewModel;
+import com.app.udeposits.ui.share.ShareViewModel;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -84,6 +86,31 @@ public class DepositManager {
                     && deposit.getDurationInt() <= Integer.parseInt(fields[5])));
         if (!fields[6].isEmpty())
             stream = stream.filter(deposit -> deposit.getPayout().contains(fields[6]));
-        return stream.collect(Collectors.toList());
+        ShareViewModel.search = stream.collect(Collectors.toList());
+        return ShareViewModel.search;
+    }
+
+    public static Set<Integer> getAllUAHPeriods(){
+        SortedSet<Integer> periods = new TreeSet<>();
+        for (Deposit deposit : uahDeposits) {
+            periods.add(deposit.getDurationInt());
+        }
+        return periods;
+    }
+
+    public static Set<Integer> getAllUSDPeriods(){
+        SortedSet<Integer> periods = new TreeSet<>();
+        for (Deposit deposit : usdDeposits) {
+            periods.add(deposit.getDurationInt());
+        }
+        return periods;
+    }
+
+    public static Set<Integer> getAllEUROPeriods(){
+        SortedSet<Integer> periods = new TreeSet<>();
+        for (Deposit deposit : euroDeposits) {
+            periods.add(deposit.getDurationInt());
+        }
+        return periods;
     }
 }

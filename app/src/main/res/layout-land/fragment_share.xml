@@ -10,9 +10,8 @@
         android:id="@+id/searchButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="138dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="139dp"
+        android:layout_marginStart="213dp"
+        android:layout_marginTop="20dp"
         android:background="#B3E5FC"
         android:fontFamily="@font/font"
         android:onClick="goToCalc"
@@ -20,9 +19,8 @@
         android:textAllCaps="false"
         android:textSize="25dp"
         android:theme="@style/FontButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/payoutField" />
+        app:layout_constraintStart_toEndOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/currencyField" />
 
     <TextView
         android:id="@+id/textView13"
@@ -42,15 +40,12 @@
         android:layout_width="134dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="61dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/font"
         android:text="Название:"
         android:textSize="25dp"
-        app:layout_constraintEnd_toStartOf="@+id/searchButton3"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/payoutField"
@@ -101,40 +96,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
     <TextView
-        android:id="@+id/currencyField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/font"
-        android:textSize="26dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView25" />
-
-    <TextView
-        android:id="@+id/percentField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="260dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/font"
-        android:textSize="26dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="115dp"
-        android:fontFamily="@font/font"
-        android:text="Процент:"
-        android:textSize="26dp"
-        app:layout_constraintStart_toEndOf="@+id/textView25"
-        app:layout_constraintTop_toBottomOf="@+id/nameField" />
-
-    <TextView
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -151,7 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/font"
         android:text="Банк:"
         android:textSize="25dp"
@@ -174,11 +135,41 @@
         android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="68dp"
         android:fontFamily="@font/font"
         android:text="Валюта:"
         android:textSize="26dp"
+        tools:layout_editor_absoluteX="483dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font"
+        android:text="Процент:"
+        android:textSize="26dp"
+        tools:layout_editor_absoluteX="601dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <TextView
+        android:id="@+id/percentField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="620dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/font"
+        android:textSize="26dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/currencyField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="512dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/font"
+        android:textSize="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
 </androidx.constraintlayout.widget.ConstraintLayout>

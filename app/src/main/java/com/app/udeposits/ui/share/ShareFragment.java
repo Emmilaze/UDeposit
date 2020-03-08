@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.app.udeposits.R;
+import com.app.udeposits.core.NotEnoughDataException;
 
 public class ShareFragment extends Fragment {
 
@@ -23,6 +24,7 @@ public class ShareFragment extends Fragment {
         shareViewModel =
                 ViewModelProviders.of(this).get(ShareViewModel.class);
         View root = inflater.inflate(R.layout.fragment_share, container, false);
+            shareViewModel.setFields(root);
         return root;
     }
 }

@@ -1,6 +1,5 @@
 package com.app.udeposits.ui.gallery;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.Build;
 import android.view.View;
@@ -9,8 +8,9 @@ import androidx.annotation.RequiresApi;
 import androidx.lifecycle.ViewModel;
 
 import com.app.udeposits.R;
-import com.app.udeposits.core.Deposit;
-import com.app.udeposits.core.fileManager.DepositManager;
+import com.app.udeposits.core.deposit.Deposit;
+import com.app.udeposits.core.deposit.DepositManager;
+import com.app.udeposits.ui.share.ShareViewModel;
 
 import java.util.List;
 
@@ -34,7 +34,7 @@ public class GalleryViewModel extends ViewModel {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public String[][] fillTable() {
         List<Deposit> deposits;
-        if(fields == null)
+        if (fields == null)
             deposits = manager.getDeposits();
         else
             deposits = manager.searchDeposit(fields);
@@ -62,7 +62,8 @@ public class GalleryViewModel extends ViewModel {
         tb.addDataClickListener(new TableDataClickListener() {
             @Override
             public void onDataClicked(int rowIndex, Object clickedData) {
-                System.out.println(rowIndex);
+                ShareViewModel.index = rowIndex;
+                GalleryFragment.clicked = true;
             }
         });
     }

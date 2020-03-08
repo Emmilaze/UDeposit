@@ -18,8 +18,9 @@ import de.codecrafters.tableview.TableView;
 public class GalleryFragment extends Fragment {
 
     private GalleryViewModel galleryViewModel;
-    private static View root;
+    public static View root;
     public static String currency = "UAH";
+    public static boolean clicked;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -29,14 +30,5 @@ public class GalleryFragment extends Fragment {
         root = inflater.inflate(R.layout.fragment_gallery, container, false);
         galleryViewModel.printTable(root);
         return root;
-    }
-
-    public static void getMoreInfo(){
-
-    }
-
-    public static void goToCalc(){
-        TableView tableView = root.findViewById(R.id.tableView);
-
     }
 }

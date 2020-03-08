@@ -10,8 +10,8 @@
         android:id="@+id/searchButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="143dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="476dp"
+        android:layout_marginTop="16dp"
         android:background="#B3E5FC"
         android:fontFamily="@font/font"
         android:onClick="calculate"
@@ -20,7 +20,7 @@
         android:textSize="25dp"
         android:theme="@style/FontButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
     <TextView
         android:id="@+id/textView14"
@@ -41,12 +41,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/font"
         android:text="Первоначальный взнос"
         android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
@@ -54,83 +52,70 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="139dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="140dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/font"
         android:text="Ставка, %"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/first" />
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <EditText
         android:id="@+id/percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginEnd="36dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="92dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/font"
         android:text="Количество дней"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="28dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/percent" />
+        app:layout_constraintTop_toBottomOf="@+id/first" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/font"
         android:text="Доход:"
-        android:textSize="47dp"
+        android:textSize="40dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/days" />
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="136dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/font"
         android:text="Капитализация"
         android:textSize="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/days" />
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/percent" />
 
     <EditText
         android:id="@+id/days"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
+        android:layout_marginStart="26dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="52dp"
         android:ems="10"
         android:inputType="number"
         android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -138,25 +123,22 @@
         android:id="@+id/first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginStart="30dp"
         android:ems="10"
         android:inputType="number"
         android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
         android:id="@+id/sum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="1dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/font"
         android:textSize="40dp"
         app:layout_constraintStart_toEndOf="@+id/textView19"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/days" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

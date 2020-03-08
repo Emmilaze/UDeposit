@@ -6,24 +6,6 @@
     android:layout_height="match_parent"
     android:background="@mipmap/back">
 
-    <Spinner
-        android:id="@+id/currencySpinner"
-        android:layout_width="151dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22" />
-
-    <Spinner
-        android:id="@+id/periodSpinner"
-        android:layout_width="151dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
     <TextView
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
@@ -42,13 +24,21 @@
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/font"
         android:text="Валюта:"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/currencySpinner"
+        android:layout_width="151dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
     <TextView
         android:id="@+id/textView26"
@@ -60,28 +50,32 @@
         android:text="Период:"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/periodSpinner"
+        android:layout_width="151dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
     <lecho.lib.hellocharts.view.ColumnChartView
         android:id="@+id/chart"
-        android:layout_width="385dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="335dp"
+        android:layout_height="310dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currencySpinner" />
 
     <lecho.lib.hellocharts.view.PreviewColumnChartView
         android:id="@+id/preview"
-        android:layout_width="385dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="13dp"
+        android:layout_width="335dp"
+        android:layout_height="310dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chart" />
+        app:layout_constraintTop_toBottomOf="@+id/periodSpinner" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

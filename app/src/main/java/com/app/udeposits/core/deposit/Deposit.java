@@ -1,4 +1,4 @@
-package com.app.udeposits.core;
+package com.app.udeposits.core.deposit;
 
 public class Deposit {
     private String bankName;

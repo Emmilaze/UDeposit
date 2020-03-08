@@ -17,12 +17,19 @@ import com.app.udeposits.R;
 public class SendFragment extends Fragment {
 
     private SendViewModel sendViewModel;
+    public static View root;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         sendViewModel =
                 ViewModelProviders.of(this).get(SendViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_send, container, false);
+        root = inflater.inflate(R.layout.fragment_send, container, false);
+        sendViewModel.printGraph(root);
+
+
+
         return root;
     }
+
+
 }

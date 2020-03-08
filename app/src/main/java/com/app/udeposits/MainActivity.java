@@ -4,6 +4,7 @@ import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.RequiresApi;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
@@ -11,15 +12,14 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.app.udeposits.core.UtilPercents;
-import com.app.udeposits.core.fileManager.DepositManager;
-import com.app.udeposits.core.fileManager.FileManager;
+import com.app.udeposits.core.deposit.DepositManager;
 import com.app.udeposits.ui.gallery.GalleryFragment;
 import com.app.udeposits.ui.gallery.GalleryViewModel;
+import com.app.udeposits.ui.share.ShareFragment;
+import com.app.udeposits.ui.share.ShareViewModel;
 import com.app.udeposits.ui.slideshow.SlideshowFragment;
 import com.app.udeposits.ui.slideshow.SlideshowViewModel;
 import com.app.udeposits.ui.tools.ToolsFragment;
-import com.app.udeposits.ui.tools.ToolsViewModel;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -27,8 +27,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -69,34 +71,35 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickUAH(View view) {
         GalleryFragment.currency = "UAH";
-        GalleryViewModel.fields = null;
-        move();
+        setDefaultFields();
+        move(new GalleryFragment());
     }
 
     public void onClickUSD(View view) {
         GalleryFragment.currency = "USD";
-        GalleryViewModel.fields = null;
-        move();
+        setDefaultFields();
+        move(new GalleryFragment());
     }
 
     public void onClickEURO(View view) {
         GalleryFragment.currency = "EURO";
-        GalleryViewModel.fields = null;
-        move();
+        setDefaultFields();
+        move(new GalleryFragment());
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void search(View view) {
         String[] fields = SlideshowViewModel.getFields(SlideshowFragment.root);
         GalleryViewModel.fields = fields;
-        move();
+        GalleryFragment.clicked = false;
+        move(new GalleryFragment());
     }
 
-    private void move() {
+    private void move(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.setCustomAnimations(android.R.animator.fade_in,
-                android.R.animator.fade_out).replace(R.id.nav_host_fragment, new GalleryFragment());
+                android.R.animator.fade_out).replace(R.id.nav_host_fragment, fragment);
         transaction.commit();
     }
 
@@ -105,6 +108,32 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getMoreInfo(View view) {
+        if (!GalleryFragment.clicked) {
+            Toast toast = Toast.makeText(GalleryFragment.root.getContext(),
+                    "Выберите депозит из списка",
+                    Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.BOTTOM, 0, 0);
+            toast.show();
+        } else {
+            move(new ShareFragment());
+        }
+    }
 
+    public void goToCalc(View view) {
+        if (!GalleryFragment.clicked) {
+            Toast toast = Toast.makeText(GalleryFragment.root.getContext(),
+                    "Выберите депозит из списка",
+                    Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.BOTTOM, 0, 0);
+            toast.show();
+        } else {
+            move(new ToolsFragment());
+        }
+    }
+
+    private void setDefaultFields() {
+        GalleryViewModel.fields = null;
+        GalleryFragment.clicked = false;
+        ShareViewModel.search = null;
     }
 }
