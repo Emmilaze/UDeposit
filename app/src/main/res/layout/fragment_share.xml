@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/FontTheme"
     android:background="@mipmap/back" >
 
     <Button
@@ -11,12 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="138dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="139dp"
         android:background="#B3E5FC"
         android:fontFamily="@font/font"
         android:onClick="goToCalc"
         android:text="Калькулятор"
+        android:textColor="@color/colorBlack"
         android:textAllCaps="false"
         android:textSize="25dp"
         android:theme="@style/FontButton"
@@ -29,10 +31,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="119dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="119dp"
         android:fontFamily="@font/font"
         android:text="Депозит"
+        android:textColor="@color/colorBlack"
         android:textSize="40dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,6 +51,8 @@
         android:layout_marginEnd="61dp"
         android:fontFamily="@font/font"
         android:text="Название:"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
         android:textSize="25dp"
         app:layout_constraintEnd_toStartOf="@+id/searchButton3"
         app:layout_constraintHorizontal_bias="0.0"
@@ -85,7 +92,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/font"
-        android:textSize="26dp"
+        android:textSize="22dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
@@ -130,6 +137,7 @@
         android:layout_marginTop="115dp"
         android:fontFamily="@font/font"
         android:text="Процент:"
+        android:textStyle="bold"
         android:textSize="26dp"
         app:layout_constraintStart_toEndOf="@+id/textView25"
         app:layout_constraintTop_toBottomOf="@+id/nameField" />
@@ -142,6 +150,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/font"
         android:text="Продолжительность:"
+        android:textStyle="bold"
         android:textSize="26dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/percentField" />
@@ -154,7 +163,8 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/font"
         android:text="Банк:"
-        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textSize="26dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameField" />
 
@@ -166,6 +176,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/font"
         android:text="Выплата:"
+        android:textStyle="bold"
         android:textSize="26dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/durationField" />
@@ -178,6 +189,7 @@
         android:layout_marginTop="68dp"
         android:fontFamily="@font/font"
         android:text="Валюта:"
+        android:textStyle="bold"
         android:textSize="26dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />

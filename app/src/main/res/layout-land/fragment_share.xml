@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/FontTheme"
     android:background="@mipmap/back" >
 
     <Button
         android:id="@+id/searchButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="213dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="104dp"
         android:background="#B3E5FC"
         android:fontFamily="@font/font"
         android:onClick="goToCalc"
@@ -19,7 +20,7 @@
         android:textAllCaps="false"
         android:textSize="25dp"
         android:theme="@style/FontButton"
-        app:layout_constraintStart_toEndOf="@+id/textView24"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currencyField" />
 
     <TextView
@@ -30,6 +31,7 @@
         android:layout_marginEnd="119dp"
         android:fontFamily="@font/font"
         android:text="Депозит"
+        android:textStyle="bold"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +45,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/font"
         android:text="Название:"
+        android:textStyle="bold"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -103,6 +106,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/font"
         android:text="Продолжительность:"
+        android:textStyle="bold"
         android:textSize="26dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/percentField" />
@@ -115,6 +119,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/font"
         android:text="Банк:"
+        android:textStyle="bold"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameField" />
@@ -127,6 +132,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/font"
         android:text="Выплата:"
+        android:textStyle="bold"
         android:textSize="26dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/durationField" />
@@ -135,41 +141,47 @@
         android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="200dp"
         android:fontFamily="@font/font"
         android:text="Валюта:"
+        android:textStyle="bold"
         android:textSize="26dp"
-        tools:layout_editor_absoluteX="483dp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameField" />
 
     <TextView
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50dp"
         android:fontFamily="@font/font"
         android:text="Процент:"
+        android:textStyle="bold"
         android:textSize="26dp"
-        tools:layout_editor_absoluteX="601dp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameField" />
 
     <TextView
         android:id="@+id/percentField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="620dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="140dp"
         android:fontFamily="@font/font"
         android:textSize="26dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
     <TextView
         android:id="@+id/currencyField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="512dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="280dp"
         android:fontFamily="@font/font"
         android:textSize="26dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 </androidx.constraintlayout.widget.ConstraintLayout>
